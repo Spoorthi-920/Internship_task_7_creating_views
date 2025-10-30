@@ -57,16 +57,18 @@ JOIN Orders o ON c.customer_id = o.customer_id
 GROUP BY c.customer_name
 HAVING SUM(o.order_amount) > 2000;
 
--- Security / Abstraction Example
--- Instead of giving users direct access to Orders, you can allow access to only the View:
+-- Usage Examples
+SELECT * FROM customer_orders;
+SELECT * FROM high_value_customers;
 
+
+-- Step 5: Security / Abstraction Example
+
+-- Instead of giving users direct access to Orders, you can allow access to only the View:
 GRANT SELECT ON high_value_customers TO 'analyst_user';
 -- This ensures sensitive columns (like customer contact info) remain hidden.
 -- Note: “The GRANT statement illustrates how access control can be implemented for views. Execution may require admin privileges.”
 
--- Step 5: Usage Examples
-SELECT * FROM customer_orders;
-SELECT * FROM high_value_customers;
 
 -- Outcome:
 -- 1. Created reusable and secure SQL logic using CREATE VIEW.
