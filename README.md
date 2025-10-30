@@ -45,4 +45,4 @@ Illustrated how views can be used to grant limited access to sensitive data, all
 
 ## Learning Reflection  
 This task provided a clear understanding of how **SQL views** act as a bridge between raw data and user queries.  
-They help simplify complex logic, reduce redundancy, and secure database access — making data handling more efficient and controlled.
+They help simplify complex logic, reduce redundancy, and secure database access, making data handling more efficient and controlled.
